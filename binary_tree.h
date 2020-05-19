@@ -1,8 +1,7 @@
-//SOLUTION
-#ifndef BINARY_TREE_H
-#define BINARY_TREE_H
+#pragma once
 
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -40,6 +39,7 @@ public:
     */
     Binary_tree(string root_data, Binary_tree left, Binary_tree right);
 
+    void set(string root_data, Binary_tree left, Binary_tree right);
 
     /**
        Returns the height of this tree.
@@ -81,8 +81,3 @@ private:
 
     Node* root;
 };
-
-#endif
-
-
-
