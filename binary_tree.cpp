@@ -1,8 +1,4 @@
-//SOLUTION
-#include <algorithm>
 #include "binary_tree.h"
-
-using namespace std;
 
 Binary_tree::Binary_tree()
 {
@@ -23,6 +19,13 @@ Binary_tree::Binary_tree(string root_data, Binary_tree left, Binary_tree right)
     root->data = root_data;
     root->left = left.root;
     root->right = right.root;
+}
+
+void Binary_tree::set(string root_data, Binary_tree left, Binary_tree right)
+{
+	root->data = root_data;
+	root->left = left.root;
+	root->right = right.root;
 }
 
 int Binary_tree::height(const Node* n) const
@@ -65,6 +68,3 @@ Binary_tree Binary_tree::right() const
     result.root = root->right;
     return result;
 }
-
-
-
